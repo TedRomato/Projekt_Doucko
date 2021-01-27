@@ -1,0 +1,82 @@
+body{
+  font-family: sans-serif;
+  margin:0;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: blue;
+  z-index: 2;
+}
+
+#Navbar ul{
+  list-style: none;
+}
+
+#Navbar li{
+  display: inline-block;
+  padding-right: 1%;
+  padding-left: 1%;
+  text-align: center;
+}
+
+.formSection{
+
+}
+
+.carousel-item{
+  display: block;
+  text-align:center;
+}
+
+.body_wrapper{
+  padding: 10%;
+}
+
+.body_wrapper div{
+  text-align: center;
+}
+
+.section_wrapper{
+  padding: 8%;
+}
+
+.owl-prev {
+    width: 15px;
+    height: 50px;
+    position: absolute;
+    top: -1em;
+    left: 1em;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 15px;
+    height: 50px;
+    position: absolute;
+    top: -1em;
+    right: 1em;
+    display: block !important;
+    border:0px solid black;
+}
+
+.hidden{
+  display: none;
+}
+
+#SuccesfulForm{
+  position: fixed;
+  height: 30%;
+  width: 30%;
+  left:35%;
+  top:35%;
+  background-color: blue;
+}
