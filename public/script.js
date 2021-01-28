@@ -1,19 +1,25 @@
 $(".FAQquestion").click(function(event) {
   $(".FAQanswer").addClass("hidden");
+  $('.FAQquestion').removeClass("selectedFaq");
   if(event.target.id == "FAQ1"){
     $("#Answer1").removeClass("hidden");
+    $("#FAQ1").addClass("selectedFaq");
   }
   if(event.target.id == "FAQ2"){
     $("#Answer2").removeClass("hidden");
+    $("#FAQ2").addClass("selectedFaq");
   }
   if(event.target.id == "FAQ3"){
     $("#Answer3").removeClass("hidden");
+    $("#FAQ3").addClass("selectedFaq");
   }
   if(event.target.id == "FAQ4"){
     $("#Answer4").removeClass("hidden");
+    $("#FAQ4").addClass("selectedFaq");
   }
   if(event.target.id == "FAQ5"){
     $("#Answer5").removeClass("hidden");
+    $("#FAQ5").addClass("selectedFaq");
   }
 });
 
@@ -24,12 +30,26 @@ $(document).ready(function(){
   $("#Lector-owl-carousel").owlCarousel(settings);
 });
 
+$('[name="lvl"]').change(function(){
+  displayCheckboxWarning();
+});
+
 
 function displayCheckboxWarning(){
   if($('input[name="subject"]:checkbox').filter(':checked').length < 1){
     $("#CheckboxWarning").removeClass("hidden");
   }else{
     $("#CheckboxWarning").addClass("hidden");
+  }
+  if($("input[value|='Čeština']").is(":checked") && ($("[name='lvl']").children("option:selected").val() == "3-4střední" || $("[name='lvl']").children("option:selected").val() == "1-2střední")){
+    $("#Czech_warning").removeClass("hidden");
+  }else{
+    $("#Czech_warning").addClass("hidden");
+  }
+  if($("input[value|='Německý jazyk']").is(":checked") && $("[name='lvl']").children("option:selected").val() == "3-4střední"){
+    $("#German_warning").removeClass("hidden");
+  }else{
+    $("#German_warning").addClass("hidden");
   }
 }
 
@@ -38,7 +58,10 @@ $("form").submit(function(e){
   if ($('[name="subject"]:checkbox').filter(':checked').length < 1){
     scrollToElement("#SubjectsDiv");
     $("#CheckboxWarning").removeClass("hidden");;
-    return false;
+    return;
+  }else if($("#German_warning").hasClass("hidden") || $("#Czech_warning").hasClass("hidden")){
+    scrollToElement("#SubjectsDiv");
+    return;
   }else{
 
     $.ajax({

@@ -16,7 +16,7 @@
 
         <li><a onclick="scrollToElement('#References')">Recenze</a></li>
 
-        <li><a onclick="scrollToElement('#Instructors')">Lektoři</a></li>
+        <li><a onclick="scrollToElement('#Lectors')">Lektoři</a></li>
 
         <li><a onclick="scrollToElement('#FAQ')">FAQ</a></li>
       </ul>
@@ -25,7 +25,7 @@
     <div class="body_wrapper">
       <div class="" id="About_us">
         <h2 id="Name">Kdo jsme</h2>
-        <p>--------------<br>---------------------<br>------------------<br>---------------</p>
+        Jsme parta mladých lidí, kteří doučování berou jako své druhé já. Baví nás pomáhat studentům v nesnázích a předávat vědomosti dál. Zakládáme si na co nejjednodušším vysvětlení látky v kombinaci s milým a ochotným přístupem všech lektorů. Věříme, že pod správným vedením se každý student může propracovat k lepším známkám.
       </div>
 
       <div class="section_wrapper" id="Customer_form">
@@ -102,6 +102,9 @@
               <option value="1-2střední">1. a 2. ročník střední školy</option>
               <option value="3-4střední">3. a 4. ročník střední školy</option>
             </select>
+            <p class="warning hidden" id="German_warning"> Omlouváme se, ale němčinu doučujeme pouze do úrovně 1. a 2. stupně střední školy. </p>
+            <p class="warning hidden" id="Czech_warning"> Omlouváme se, ale češtinu doučujeme pouze na úrovni základní školy. </p>
+
           </div>
 
           <br>
@@ -177,17 +180,18 @@
       <hr>
 
       <div class="section_wrapper" id="FAQ">
+
+        <button id="FAQ1" class="FAQquestion selectedFaq">Kolik to stojí?  </button>
+        <button id="FAQ2" class="FAQquestion">Jak to funguje?   </button>
+        <button id="FAQ3" class="FAQquestion">Jak doučování probíhá? </button>
+        <button id="FAQ4" class="FAQquestion">Přijede lektor až ke mně domů? </button>
+        <button id="FAQ5" class="FAQquestion">Co když nebudu spokojený/á s lektorem?</button>
         <ul>
-          <li><button id="FAQ1" class="FAQquestion">Otazka 1</button></li>
-          <li id="Answer1" class="FAQanswer">answer1</li>
-          <li><button id="FAQ2" class="FAQquestion">Otazka 2</button></li>
-          <li id="Answer2" class="FAQanswer hidden">answerOne</li>
-          <li><button id="FAQ3" class="FAQquestion" class="FAQanswer">Otazka 3</button></li>
-          <li id="Answer3" class="FAQanswer hidden">answerOne</li>
-          <li><button id="FAQ4" class="FAQquestion">Otazka 4</button></li>
-          <li id="Answer4" class="FAQanswer hidden">answerOne</li>
-          <li><button id="FAQ5" class="FAQquestion" >Otazka 5</button></li>
-          <li id="Answer5" class="FAQanswer hidden">answerOne</li>
+          <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 120 do 220 Kč za 60 minut výuky.</li>
+          <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
+          <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum.  Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového doučování s osnovou dané lekce.  Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
+          <li id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </li>
+          <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám vrácení peněz za uplynulou lekci.</li>
         </ul>
       </div>
     </div>
