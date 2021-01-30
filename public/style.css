@@ -1,19 +1,68 @@
 body{
   font-family: sans-serif;
   margin:0;
+  font-size: 25px;
+  background-color: #3AAFA9;
+  color: #17252A;
 }
+
 
 table{
   margin-left: auto;
   margin-right: auto;
 }
 
+input{
+  margin: 0;
+  border-radius: 20px;
+  border-color: #2B7A78;
+  border-style: solid;
+  padding: 5px;
+  vertical-align: top;
+  background-color: #DEF2F1;
+  width: 160px;
+
+
+}
+
+textarea{
+  border-radius: 20px;
+  border-color: #2B7A78;
+  border-style: solid;
+  padding: 15px;
+  background-color: #DEF2F1;
+  height: 100px;
+  width: 250px;
+  resize: none;
+}
+
+input:focus, textarea:focus, select:focus{
+        outline: none;
+}
+
+
+#SubjectsDiv input{
+  -webkit-appearance: none;
+  background-color: #DEF2F1;
+	border: 1px solid #2B7A78;
+	padding: 9px;
+	border-radius: 9px;
+  vertical-align: baseline;
+
+}
+
+button:focus, textarea:focus, select:focus{
+        outline: none;
+}
+
 #Navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: blue;
+  background-color: #17252A;
   z-index: 2;
+  font-weight: bold;
+  color: #DEF2F1;
 }
 
 #Navbar ul{
@@ -25,11 +74,28 @@ table{
   padding-right: 1%;
   padding-left: 1%;
   text-align: center;
+  vertical-align: middle;
 }
 
-.formSection{
-
+li:hover{
+  cursor: default;
 }
+
+#About_us p{
+  text-align: left;
+}
+
+button{
+  border-radius: 40px;
+  border-color: #2B7A78;
+  border-style: solid;
+  background-color: #DEF2F1;
+  padding: 5px;
+  font-size: 15px;
+  color: #17252A;
+  margin-bottom: 10px;
+}
+
 
 .carousel-item{
   display: block;
@@ -46,14 +112,66 @@ table{
 
 .section_wrapper{
   padding: 8%;
+  font-size: 25px;
 }
 
 .section_wrapper{
   padding: 8%;
 }
 
-li{
-  list-style: none;
+.table {
+  width: auto;
+  display: table;
+  table-layout: fixed; /* optional, for equal spacing */
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.tableCol {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+
+}
+
+.tableCol > button{
+  padding-top: 15px;
+  padding-bottom:15px;
+  width: 150px;
+  height: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 150px;
+}
+
+.selectedButton{
+  border-color: #DEF2F1;
+  background-color: #2B7A78;
+  color: #FEFFFF;
+}
+
+h2{
+  text-align: left;
+  padding-bottom: 2.5%;
+}
+
+h3{
+  font-size: 25px;
+  color: #17252A;
+  font-weight: normal;
+}
+
+hr{
+  width: 80%;
+  height: 1px;
+  border: solid;
+  border-radius: 4px;
+  background-color: #17252A;
+}
+
+td > button{
+  width: 100%;
 }
 
 .owl-prev {
@@ -80,16 +198,53 @@ li{
   display: none;
 }
 
-.selectedFaq{
-  border-color: blue;
-  border-width: 3px;
+#FAQ{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+#FAQ ul{
+  margin-top: 0;
+  text-align: left;
+  list-style: none;
+}
+
+
+#FAQ button{
+  padding-top: 15px;
+  padding-bottom:15px;
+  width: 150px;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 150px;
+}
+
+#FAQ div{
+  margin-bottom: 30px;
 }
 
 #SuccesfulForm{
   position: fixed;
-  height: 30%;
-  width: 30%;
-  left:35%;
-  top:35%;
-  background-color: blue;
+  top: 40%;
+  bottom: 40%;
+  left: 40%;
+  right: 40%;
+  padding: 1%;
+  border-radius: 40px;
+  border-color: #2B7A78;
+  border-style: solid;
+  background-color: #DEF2F1;
+  font-size: 15px;
+  color: #17252A;
+  margin-bottom: 10px;
+  z-index: 100;
+}
+
+
+#SuccesfulForm p{
+  font-weight: bold;
+  font-size: 18px;
 }

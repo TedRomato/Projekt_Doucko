@@ -27,17 +27,10 @@ app.get('/', function(req, res) {
 });
 
 app.post('/form', function(req, res) {
-  console.log("jsem tu");
-  console.log(req.body.subject);
-
-  str = "<p>name: " + req.body.name + "<br>" +
-    "e-mail: " + req.body.email + "<br>" +
-    "subject: " + req.body.subject + "<br>" +
-    "lvl: " + req.body.lvl + "<br>" +
-    "frequency: " + req.body.frequency + "<br>" +
-    "time-note: " + req.body.time_note + "<br>" +
-    "lection_type: " + req.body.lection_type + "<br>" +
-    "notes: " + req.body.notes + "<br></p>";
+  let str = JSON.stringify(req.body);
+  str = str.replace('{"', "");
+  str = str.replace('":""}', "");
+  console.log(str);
 
   mailOptions = {
     from: process.env.EMAIL,

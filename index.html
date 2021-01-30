@@ -1,205 +1,226 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-  </head>
-  <body>
 
-    <div class="" id="Navbar">
-      <ul>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+</head>
 
-        <li><a onclick="scrollToElement('#About_us')">Domeček</a></li>
+<body>
 
-        <li><a onclick="scrollToElement('#References')">Recenze</a></li>
+  <div class="" id="Navbar">
+    <ul>
 
-        <li><a onclick="scrollToElement('#Lectors')">Lektoři</a></li>
+      <li><a onclick="scrollToElement('#About_us')"><svg fill="#DEF2F1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="32px" height="32px"><path d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"/></svg></a></li>
 
-        <li><a onclick="scrollToElement('#FAQ')">FAQ</a></li>
-      </ul>
+      <li><a onclick="scrollToElement('#References')">Recenze</a></li>
+
+      <li><a onclick="scrollToElement('#Lectors')">Lektoři</a></li>
+
+      <li><a onclick="scrollToElement('#FAQ')">FAQ</a></li>
+    </ul>
+  </div>
+
+  <div class="body_wrapper">
+    <div class="section_wrapper" id="About_us">
+      <h2 id="Name">Kdo jsme</h2>
+      <p>Jsme parta mladých lidí, kteří doučování berou jako své druhé já. Baví nás pomáhat studentům v nesnázích a předávat vědomosti dál. Zakládáme si na co nejjednodušším vysvětlení látky v kombinaci s milým a ochotným přístupem všech lektorů. Věříme, že pod správným vedením se každý student může propracovat k lepším známkám.
+      </p>
     </div>
 
-    <div class="body_wrapper">
-      <div class="" id="About_us">
-        <h2 id="Name">Kdo jsme</h2>
-        Jsme parta mladých lidí, kteří doučování berou jako své druhé já. Baví nás pomáhat studentům v nesnázích a předávat vědomosti dál. Zakládáme si na co nejjednodušším vysvětlení látky v kombinaci s milým a ochotným přístupem všech lektorů. Věříme, že pod správným vedením se každý student může propracovat k lepším známkám.
-      </div>
-
-      <div class="section_wrapper" id="Customer_form">
-        <form class="" action="/form" method="post">
-          <div class="formSection">
-            <label for="name" >Jméno: </label>
-            <input type="text" name="name" value="">
-          </div>
-
-          <br>
-          <div class="formSection">
-            <label for="email" >E-mail: </label>
-            <input type="text" name="email" value="">
-          </div>
-
-          <br>
-          <div class="formSection">
-            <p class="">Předmět: </p>
-            <div class="" id="SubjectsDiv">
-              <table class="center">
-                <tr>
-                  <td>
-                    <input type="checkbox" name="subject" value="Matematika" checked onclick="displayCheckboxWarning()">
-                    <label for="subject">Matematika</label>
-                  </td>
-
-                  <td>
-                    <input type="checkbox" name="subject" value="Fyzika" onclick="displayCheckboxWarning()">
-                    <label for="subject">Fyzika</label>
-                  </td>
-
-                  <td>
-                    <input type="checkbox" name="subject" value="Chemie" onclick="displayCheckboxWarning()">
-                    <label for="subject">Chemie</label>
-                  </td>
-
-                  <td>
-                    <input type="checkbox" name="subject" value="Čeština" onclick="displayCheckboxWarning()">
-                    <label for="subject">Čeština</label>
-                  </td>
-
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" name="subject" value="Anglický jazyk" onclick="displayCheckboxWarning()">
-                    <label for="subject">Anglický jazyk</label>
-                  </td>
-                  <td>
-                    <input type="checkbox" name="subject" value="Německý jazyk" onclick="displayCheckboxWarning()">
-                    <label for="subject">Německý jazyk</label>
-                  </td>
-                  <td>
-                    <input type="checkbox" name="subject" value="Zeměpis" onclick="displayCheckboxWarning()">
-                    <label for="subject">Zeměpis</label>
-                  </td>
-                  <td>
-                    <input type="checkbox" name="subject" value="Dějepis" onclick="displayCheckboxWarning()">
-                    <label for="subject">Dějepis</label>
-                  </td>
-                </tr>
-              </table>
-              <p class="warning hidden" id="CheckboxWarning"> Vyberte prosím alespoň jeden předmět.</p>
-            </div>
-          </div>
-
-          <br>
-          <div class="formSection">
-            <label for="lvl">Úroveň: </label>
-            <select name="lvl">
-              <option value="1-5zš">1. stupeň zš</option>
-              <option value="přijímačky-8leté">přijímačky na osmileté gymnázium</option>
-              <option value="6-9zš">1. stupeň zš</option>
-              <option value="přijímačky-střední">přijímačky na střední</option>
-              <option value="1-2střední">1. a 2. ročník střední školy</option>
-              <option value="3-4střední">3. a 4. ročník střední školy</option>
-            </select>
-            <p class="warning hidden" id="German_warning"> Omlouváme se, ale němčinu doučujeme pouze do úrovně 1. a 2. stupně střední školy. </p>
-            <p class="warning hidden" id="Czech_warning"> Omlouváme se, ale češtinu doučujeme pouze na úrovni základní školy. </p>
-
-          </div>
-
-          <br>
-          <div class="formSection">
-            <label for="frequency">Frekvence: </label>
-            <select name="frequency">
-              <option value="once">Jednorázově</option>
-              <option value="multiple">Pravidelně</option>
-            </select>
-          </div>
-
-          <br>
-          <div class="formSection">
-            <label for="time">Upřesnění času</label>
-            <input type="text" name="time_note" value="">
-          </div>
-
-          <br>
-          <div class="formSection">
-            <p>Preferovaný typ výuky:</p>
-            <input type="radio" name="lection_type" value="inPerson" checked>
-            <label for="lection_type">osobně v Plzni</label><br>
-            <input type="radio" name="lection_type" value="online">
-            <label for="lection_type">online</label><br>
-          </div>
-
-          <br>
-          <div class="formSection">
-            <label for="notes" >Poznámka: </label>
-            <input type="text" name="notes" value="">
-          </div>
-          <br>
-          <button type="submit" name="button">odeslat</button>
-        </form>
-      </div>
-
-      <div class="hidden" id="SuccesfulForm">
-        <p>Vas formular byl uspesne odeslan</p>
-        <button type="button" name="button" onclick="hideSuccessfulForm()">zpet</button>
-      </div>
-
-
-      <hr>
-      <div class="section_wrapper">
-        <h2 id="References">Reference</h2>
-
-        <div id="Ref-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
-          <div class="carousel-item"> Your Content 1</div>
-          <div class="carousel-item"> Your Content 2</div>
-          <div class="carousel-item"> Your Content 3</div>
-          <div class="carousel-item"> Your Content 4</div>
-          <div class="carousel-item"> Your Content 5</div>
-          <div class="carousel-item"> Your Content 6</div>
-          <div class="carousel-item"> Your Content 7</div>
+    <div class="section_wrapper" id="Customer_form">
+      <h2>Chci doučování</h2>
+      <form class="" action="/form" method="post">
+        <div class="formSection">
+          <h3 for="name">Jméno: </h3>
+          <input type="text" name="name" value="">
         </div>
-      </div>
 
-      <hr>
-
-      <div class="section_wrapper">
-        <h2 id="Lectors">Lektoři</h2>
-
-        <div id="Lector-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
-          <div class="carousel-item"> Your Content 1</div>
-          <div class="carousel-item"> Your Content 2</div>
-          <div class="carousel-item"> Your Content 3</div>
-          <div class="carousel-item"> Your Content 4</div>
-          <div class="carousel-item"> Your Content 5</div>
-          <div class="carousel-item"> Your Content 6</div>
-          <div class="carousel-item"> Your Content 7</div>
+        <br>
+        <div class="formSection">
+          <h3 for="email">E-mail: </h3>
+          <input type="text" name="email" value="">
         </div>
+
+        <br>
+        <div class="formSection">
+          <h3 class="">Předmět: </h3>
+          <div class="" id="SubjectsDiv">
+            <ul class="table select">
+              <li class="tableCol">
+                <button type="button" name="subject" data-value="matika" class="selectedButton">Matematika</button>
+                <br>
+                <button type="button" name="subject" data-value="fyzika">Fyzika</button>
+                <br>
+                <button type="button" name="subject" data-value="chemie">Chemie</button>
+
+              </li>
+              <li class="tableCol">
+                <button type="button" name="subject" data-value="ajina">Anglický jazyk</button>
+                <br>
+                <button type="button" name="subject" data-value="nemina">Německý jazyk</button>
+                <br>
+                <button type="button" name="subject" data-value="cestina">Čeština</button>
+              </li>
+              <li class="tableCol">
+                <button type="button" name="subject" data-value="zemak">Zeměpis</button>
+                <br>
+                <button type="button" name="subject" data-value="dejak">Dějepis</button>
+                <br>
+                <button type="button" name="subject" data-value="ivt">Programování</button>
+              </li>
+            </ul>
+
+            <p class="warning hidden" id="CheckboxWarning"> Vyberte prosím alespoň jeden předmět.</p>
+          </div>
+        </div>
+
+        <br>
+        <div class="formSection">
+          <h3>Úroveň: </h3>
+          <ul class="table radio">
+            <li class="tableCol">
+              <button type="button" name="lvl" class="selectedButton"  data-value="1-5zš">1. stupeň zš</button>
+              <br>
+              <button type="button" name="lvl" data-value="přijímačky-střední">přijímačky na střední</button>
+            </li>
+            <li class="tableCol">
+              <button type="button" name="lvl" data-value="6-9zš">2. stupeň zš</button>
+              <br>
+              <button type="button" name="lvl" data-value="1-2střední">1. a 2. ročník střední školy</button>
+            </li>
+            <li class="tableCol">
+              <button type="button" name="lvl" data-value="přijímačky-8-let-gympl">přijímačky na 8 let gympl</button>
+              <br>
+              <button type="button" name="lvl" data-value="3-4střední">3. a 4. ročník střední školy</button>
+
+            </li>
+          </ul>
+
+          <p class="warning hidden" id="German_warning"> Omlouváme se, ale němčinu doučujeme pouze do úrovně 1. a 2. stupně střední školy. </p>
+          <p class="warning hidden" id="Czech_warning"> Omlouváme se, ale češtinu doučujeme pouze na úrovni základní školy. </p>
+
+        </div>
+
+        <br>
+        <div class="formSection">
+          <h3 for="frequency">Frekvence: </h3>
+          <ul class="table radio">
+            <li class="tableCol">
+              <button type="button" name="frequency" class="selectedButton" data-value="once">Jednorázově</button>
+            </li>
+            <li class="tableCol">
+              <button type="button" name="frequency" data-value="multiple">Pravidelně</button>
+            </li>
+          </ul>
+        </div>
+
+        <br>
+        <div class="formSection">
+          <h3 for="time">Upřesnění času</h3>
+          <textarea name="time_note" maxlength="204"></textarea>
+        </div>
+
+        <br>
+        <div class="formSection">
+          <h3>Preferovaný typ výuky:</h3>
+          <ul class="table radio">
+            <li class="tableCol">
+              <button type="button" name="lessonType" class="selectedButton" data-value="inPerson">osobně v Plzni</button>
+            </li>
+            <li class="tableCol">
+              <button type="button" name="lessonType" data-value="online">online</button>
+            </li>
+          </ul>
+        </div>
+
+        <br>
+        <div class="formSection">
+          <h3 for="notes">Poznámka: </h3>
+          <textarea name="note" maxlength="204"></textarea>
+        </div>
+        <br>
+        <button type="submit" name="button">odeslat</button>
+      </form>
+    </div>
+
+    <div class="hidden" id="SuccesfulForm">
+      <p>Vas formular byl uspesne odeslan</p>
+      <button type="button" name="button" onclick="hideSuccessfulForm()">zpet</button>
+    </div>
+
+
+    <hr>
+    <div class="section_wrapper">
+      <h2 id="References">Reference</h2>
+      <button type="button" name="button" class="nextSlide" onclick="nextSlide('#Ref-owl-carousel')">prev</button>
+      <div id="Ref-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
+        <div class="carousel-item"> Your Content 1</div>
+        <div class="carousel-item"> Your Content 2</div>
+        <div class="carousel-item"> Your Content 3</div>
+        <div class="carousel-item"> Your Content 4</div>
+        <div class="carousel-item"> Your Content 5</div>
+        <div class="carousel-item"> Your Content 6</div>
+        <div class="carousel-item"> Your Content 7</div>
       </div>
-      <hr>
+      <button type="button" name="button" class="prevSlide" onclick="prevSlide('#Ref-owl-carousel')">next</button>
 
-      <div class="section_wrapper" id="FAQ">
+    </div>
 
-        <button id="FAQ1" class="FAQquestion selectedFaq">Kolik to stojí?  </button>
-        <button id="FAQ2" class="FAQquestion">Jak to funguje?   </button>
+    <hr>
+
+    <div class="section_wrapper">
+      <h2 id="Lectors">Lektoři</h2>
+      <button type="button" name="button" class="nextSlide" onclick="nextSlide('#Lector-owl-carousel')">prev</button>
+      <div id="Lector-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
+        <div class="carousel-item"> Your Content 1</div>
+        <div class="carousel-item"> Your Content 2</div>
+        <div class="carousel-item"> Your Content 3</div>
+        <div class="carousel-item"> Your Content 4</div>
+        <div class="carousel-item"> Your Content 5</div>
+        <div class="carousel-item"> Your Content 6</div>
+        <div class="carousel-item"> Your Content 7</div>
+      </div>
+      <button type="button" name="button" class="prevSlide" onclick="prevSlide('#Lector-owl-carousel')">next</button>
+    </div>
+    <hr>
+
+    <div class="section_wrapper" id="FAQ">
+
+      <div>
+        <button id="FAQ1" class="FAQquestion selectedButton">Kolik to stojí? </button>
+        <button id="FAQ2" class="FAQquestion">Jak to funguje? </button>
         <button id="FAQ3" class="FAQquestion">Jak doučování probíhá? </button>
         <button id="FAQ4" class="FAQquestion">Přijede lektor až ke mně domů? </button>
         <button id="FAQ5" class="FAQquestion">Co když nebudu spokojený/á s lektorem?</button>
+
+      </div>
+      <div>
         <ul>
-          <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 120 do 220 Kč za 60 minut výuky.</li>
-          <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
-          <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum.  Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového doučování s osnovou dané lekce.  Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
+          <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 130 do 180 Kč za 60 minut
+            výuky.</li>
+          <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje
+            prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
+          <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum. Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového
+            doučování s osnovou dané lekce. Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
           <li id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </li>
-          <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám vrácení peněz za uplynulou lekci.</li>
+          <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám
+            vrácení peněz za uplynulou lekci.</li>
         </ul>
       </div>
+
+
     </div>
+  </div>
 
 
 
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="jquery.min.js"></script>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
