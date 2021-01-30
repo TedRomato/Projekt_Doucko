@@ -24,7 +24,7 @@ $(".FAQquestion").click(function(event) {
 });
 
 /*carousels*/
-let settings = {loop:true, dots:true,dotsEach:true,slideBy:1};
+let settings = {loop:true, dots:false, slideBy:1};
 $(document).ready(function(){
   $("#Ref-owl-carousel").owlCarousel(settings);
   $("#Lector-owl-carousel").owlCarousel(settings);
