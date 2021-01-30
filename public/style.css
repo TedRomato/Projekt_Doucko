@@ -1,23 +1,22 @@
-body{
+body {
   font-family: sans-serif;
-  margin:0;
+  margin: 0;
   font-size: 25px;
   background-color: #3AAFA9;
   color: #17252A;
   padding-bottom: 0;
 }
 
-
-form{
+form {
   padding-left: 15%;
   padding-right: 15%;
 }
 
-.textLong{
+.textLong {
   border-radius: 40px;
   border-color: #17252A;
   border-style: solid;
-  background-color:#2B7A78;
+  background-color: #2B7A78;
   padding: 20px;
   font-size: 15px;
   color: #DEF2F1;
@@ -26,11 +25,11 @@ form{
   margin-left: 10px;
 }
 
-.body_wrapper.topSection{
+.body_wrapper.topSection {
   background-color: #DEF2F1;
 }
 
-#About_us .textLong{
+#About_us .textLong {
   border-color: #2B7A78;
   background-color: #DEF2F1;
   color: #17252A;
@@ -41,7 +40,7 @@ form{
   margin-right: 18%;
 }
 
-#About_us{
+#About_us {
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -50,40 +49,38 @@ form{
   display: block;
   position: relative;
   width: 100%;
-/*  padding-bottom: 100%;*/
+  /*  padding-bottom: 100%;*/
   padding: 0;
   vertical-align: middle;
   overflow: hidden;
-
 }
 
-#HeaderWave path{
+#HeaderWave path {
   stroke: none;
-  fill:#DEF2F1;;
+  fill: #DEF2F1;
+  ;
 }
 
-
-#Customer_form{
+#Customer_form {
   padding-top: 0%;
 }
 
-input{
-  margin: 0;
+input {
+  margin: 5px;
   border-radius: 20px;
   border-color: #2B7A78;
   border-style: solid;
   padding: 5px;
   vertical-align: top;
   background-color: #DEF2F1;
-  width: 160px;
+  width: 200px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.topTextInput{
-  padding-right: 30px;
-  padding-left: 30px;
-}
 
-textarea{
+
+textarea {
   border-radius: 20px;
   border-color: #2B7A78;
   border-style: solid;
@@ -94,23 +91,21 @@ textarea{
   resize: none;
 }
 
-input:focus, textarea:focus, select:focus{
-        outline: none;
+input:focus, textarea:focus, select:focus {
+  outline: none;
 }
 
-
-#SubjectsDiv input{
+#SubjectsDiv input {
   -webkit-appearance: none;
   background-color: #DEF2F1;
-	border: 1px solid #2B7A78;
-	padding: 9px;
-	border-radius: 9px;
+  border: 1px solid #2B7A78;
+  padding: 9px;
+  border-radius: 9px;
   vertical-align: baseline;
-
 }
 
-button:focus, textarea:focus, select:focus{
-        outline: none;
+button:focus, textarea:focus, select:focus {
+  outline: none;
 }
 
 #Navbar {
@@ -123,11 +118,11 @@ button:focus, textarea:focus, select:focus{
   color: #DEF2F1;
 }
 
-#Navbar ul{
+#Navbar ul {
   list-style: none;
 }
 
-#Navbar li{
+#Navbar li {
   display: inline-block;
   padding-right: 1%;
   padding-left: 1%;
@@ -135,15 +130,15 @@ button:focus, textarea:focus, select:focus{
   vertical-align: middle;
 }
 
-li:hover{
+li:hover {
   cursor: default;
 }
 
-#About_us p{
+#About_us p {
   text-align: left;
 }
 
-button{
+button {
   border-radius: 40px;
   border-color: #2B7A78;
   border-style: solid;
@@ -154,47 +149,48 @@ button{
   margin-bottom: 10px;
 }
 
-
-.carousel-item{
+.carousel-item {
   display: block;
-  text-align:center;
+  text-align: center;
 }
 
-.body_wrapper{
+.arrows{
+  display: contents;
+}
+
+.body_wrapper {
   padding: 10%;
   padding-bottom: 0;
 }
 
-.body_wrapper div{
+.body_wrapper div {
   text-align: center;
 }
 
-.section_wrapper{
+.section_wrapper {
   padding: 8%;
   font-size: 25px;
 }
 
-
 .table {
   width: auto;
   display: table;
-  table-layout: fixed; /* optional, for equal spacing */
+  table-layout: fixed;
+  /* optional, for equal spacing */
   border-collapse: collapse;
   margin: 0 auto;
 }
 
-
 .tableCol {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    list-style: none;
-
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
 }
 
-.tableCol > button{
+.tableCol>button {
   padding-top: 15px;
-  padding-bottom:15px;
+  padding-bottom: 15px;
   width: 150px;
   height: 120px;
   margin-left: 10px;
@@ -203,24 +199,24 @@ button{
   border-radius: 150px;
 }
 
-.selectedButton{
+.selectedButton {
   border-color: #DEF2F1;
   background-color: #2B7A78;
   color: #FEFFFF;
 }
 
-h2{
+h2 {
   text-align: left;
   padding-bottom: 2.5%;
 }
 
-h3{
+h3 {
   font-size: 25px;
   color: #17252A;
   font-weight: normal;
 }
 
-hr{
+hr {
   width: 80%;
   height: 1px;
   border: solid;
@@ -228,36 +224,28 @@ hr{
   background-color: #17252A;
 }
 
-td > button{
+td>button {
   width: 100%;
 }
 
-.textLong span{
+.textLong span {
   font-style: italic;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-#FAQ{
+#FAQ {
   padding-left: 0;
   padding-right: 0;
+  margin-bottom: 200px;
 }
 
 
-#FAQ ul{
-  margin-top: 0;
-  text-align: left;
-  list-style: none;
-}
-
-
-
-
-#FAQ button{
+#FAQ button {
   padding-top: 15px;
-  padding-bottom:15px;
+  padding-bottom: 15px;
   width: 150px;
   height: 80px;
   margin-left: 10px;
@@ -267,14 +255,21 @@ td > button{
   vertical-align: top;
 }
 
-#FAQ .textLong{
-  margin-bottom: 30px;
-  margin-left: 25%;
-  margin-right: 25%;
+#FAQ .textLong {
+  position : absolute;
+  width: 350px;
+  left:50%;
+  margin: 0;
   margin-top: 30px;
+  margin-left: -195px;
+  text-align : center
 }
 
-#SuccesfulForm{
+#FAQ .textLong p{
+  vertical-align: middle;
+}
+
+#SuccesfulForm {
   position: fixed;
   top: 40%;
   bottom: 40%;
@@ -291,8 +286,7 @@ td > button{
   z-index: 100;
 }
 
-
-#SuccesfulForm p{
+#SuccesfulForm p {
   font-weight: bold;
   font-size: 18px;
 }
@@ -301,19 +295,19 @@ td > button{
   display: block;
   position: relative;
   width: 100%;
-/*  padding-bottom: 100%;*/
+  /*  padding-bottom: 100%;*/
   padding: 0;
   vertical-align: middle;
   overflow: hidden;
   transform: rotate(180deg);
 }
 
-#FooterWave path{
+#FooterWave path {
   stroke: none;
-  fill:#17252A;
+  fill: #17252A;
 }
 
-#FooterWavePatch{
+#FooterWavePatch {
   position: relative;
   width: 100%;
   height: 10px;
@@ -321,7 +315,7 @@ td > button{
   background-color: #17252A;
 }
 
-#Footer{
+#Footer {
   width: 100%;
   height: 250px;
   background-color: #17252A;
