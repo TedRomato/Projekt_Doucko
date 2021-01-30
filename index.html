@@ -46,15 +46,13 @@
         <div class="table formSection">
           <div class="tableCol topTextInput">
             <h3 for="name">Jméno: </h3>
-            <input type="text" name="name" value="">
+            <input type="text" name="name" value="" placeholder="Sem zadejte vaše jméno">
           </div>
           <div class="tableCol topTextInput">
             <h3 for="email">E-mail: </h3>
-            <input type="text" name="email" value="">
+            <input type="email" name="email" placeholder="Sem zadejte váš e-mail" value="">
           </div>
         </div>
-
-        <br>
         <div class="formSection">
           <h3 class="">Předmět: </h3>
           <div class="" id="SubjectsDiv">
@@ -130,7 +128,7 @@
         <br>
         <div class="formSection">
           <h3 for="time">Upřesnění času</h3>
-          <textarea name="time_note" maxlength="204"></textarea>
+          <textarea name="time_note" maxlength="204" placeholder="Sem zadejte upřesnění času. Např.: Hodily by se mi středy a pátky odpoledne."></textarea>
         </div>
 
         <br>
@@ -138,10 +136,10 @@
           <h3>Preferovaný typ výuky:</h3>
           <ul class="table radio">
             <li class="tableCol">
-              <button type="button" name="lessonType" class="selectedButton" data-value="inPerson">osobně v Plzni</button>
+              <button type="button" name="lessonType" class="selectedButton" data-value="inPerson">Osobně v Plzni</button>
             </li>
             <li class="tableCol">
-              <button type="button" name="lessonType" data-value="online">online</button>
+              <button type="button" name="lessonType" data-value="online">Online</button>
             </li>
           </ul>
         </div>
@@ -149,7 +147,7 @@
         <br>
         <div class="formSection">
           <h3 for="notes">Poznámka: </h3>
-          <textarea name="note" maxlength="204"></textarea>
+          <textarea name="note" maxlength="204" placeholder="Sem zadejte vaše poznámky a speciální požadavky. Např.: Nechci někoho se psem, syn je alergický na chlupy."></textarea>
         </div>
         <br>
         <button type="submit" name="button">odeslat</button>
@@ -176,6 +174,14 @@
           Především mu moc děkuji za jeho trpělivost a to, že mě naučil rozumět matice, ale i ji mít trochu ráda!
           Díky jeho pomoci se se mi známky zlepšily o 2 stupně. <span>~Kačka~</span></div>
       </div>
+      <br>
+      <button type="button" class="arrows" name="button" onclick="prevSlide('#Ref-owl-carousel')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+        </svg></button>
+      <button type="button" class="arrows" name="button" onclick="nextSlide('#Ref-owl-carousel')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+        </svg></button>
+
 
     </div>
 
@@ -203,6 +209,13 @@
           jednoduše vysvětlil látku a naučil vnímat svět jiným způsobem. Matematika může být opravdu krásná.
           <span>~David~</span></div>
       </div>
+      <br>
+      <button type="button" class="arrows" name="button" onclick="prevSlide('#Lector-owl-carousel')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+        </svg></button>
+      <button type="button" class="arrows" name="button" onclick="nextSlide('#Lector-owl-carousel')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+        </svg></button>
     </div>
     <hr>
     <div class="section_wrapper">
@@ -230,19 +243,17 @@
             </li>
           </ul>
         </div>
-        <div>
-          <ul class="textLong">
-            <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 130 do 180 Kč za 60
-              minut
-              výuky.</li>
-            <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje
-              prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
-            <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum. Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového
-              doučování s osnovou dané lekce. Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
-            <li id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </li>
-            <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám
-              vrácení peněz za uplynulou lekci.</li>
-          </ul>
+        <div class="textLong">
+          <p id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 130 do 180 Kč za 60
+            minut
+            výuky.</p>
+          <p id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje
+            prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</p>
+          <p id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum. Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového
+            doučování s osnovou dané lekce. Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</p>
+          <p id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </p>
+          <p id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám
+            vrácení peněz za uplynulou lekci.</p>
         </div>
       </div>
     </div>
