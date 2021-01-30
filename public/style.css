@@ -26,18 +26,43 @@ form{
   margin-left: 10px;
 }
 
+.body_wrapper.topSection{
+  background-color: #DEF2F1;
+}
+
 #About_us .textLong{
+  border-color: #2B7A78;
+  background-color: #DEF2F1;
   color: #17252A;
-  background-color:#DEF2F1;
+  border-radius: 50px;
   font-size: 22px;
-  padding: 2%;
+  padding: 5%;
   margin-left: 18%;
   margin-right: 18%;
 }
+
 #About_us{
   padding-top: 5%;
   padding-bottom: 5%;
 }
+
+#HeaderWave {
+  display: block;
+  position: relative;
+  width: 100%;
+/*  padding-bottom: 100%;*/
+  padding: 0;
+  vertical-align: middle;
+  overflow: hidden;
+
+}
+
+#HeaderWave path{
+  stroke: none;
+  fill:#DEF2F1;;
+}
+
+
 #Customer_form{
   padding-top: 0%;
 }
@@ -216,8 +241,8 @@ td > button{
 }
 
 #FAQ{
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 
@@ -242,10 +267,11 @@ td > button{
   vertical-align: top;
 }
 
-#FAQ div{
+#FAQ .textLong{
   margin-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
 }
 
 #SuccesfulForm{
@@ -269,6 +295,30 @@ td > button{
 #SuccesfulForm p{
   font-weight: bold;
   font-size: 18px;
+}
+
+#FooterWave {
+  display: block;
+  position: relative;
+  width: 100%;
+/*  padding-bottom: 100%;*/
+  padding: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+#FooterWave path{
+  stroke: none;
+  fill:#17252A;
+}
+
+#FooterWavePatch{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  bottom: 6px;
+  background-color: #17252A;
 }
 
 #Footer{
