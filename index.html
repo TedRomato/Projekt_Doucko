@@ -14,7 +14,10 @@
   <div class="" id="Navbar">
     <ul>
 
-      <li><a onclick="scrollToElement('#About_us')"><svg fill="#DEF2F1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="32px" height="32px"><path d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"/></svg></a></li>
+      <li><a onclick="scrollToElement('#About_us')"><svg fill="#DEF2F1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32px" height="32px">
+            <path
+              d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z" />
+          </svg></a></li>
 
       <li><a onclick="scrollToElement('#References')">Recenze</a></li>
 
@@ -26,23 +29,24 @@
 
   <div class="body_wrapper">
     <div class="section_wrapper" id="About_us">
-      <h2 id="Name">Kdo jsme</h2>
-      <p>Jsme parta mladých lidí, kteří doučování berou jako své druhé já. Baví nás pomáhat studentům v nesnázích a předávat vědomosti dál. Zakládáme si na co nejjednodušším vysvětlení látky v kombinaci s milým a ochotným přístupem všech lektorů. Věříme, že pod správným vedením se každý student může propracovat k lepším známkám.
+      <h2>Kdo jsme</h2>
+      <p class="textLong">Jsme parta mladých lidí, kteří doučování berou jako své druhé já. Baví nás pomáhat studentům v nesnázích a předávat vědomosti dál. Zakládáme si na co nejjednodušším vysvětlení látky v kombinaci s milým a ochotným přístupem
+        všech lektorů.
+        Věříme, že pod správným vedením se každý student může propracovat k lepším známkám.
       </p>
     </div>
-
     <div class="section_wrapper" id="Customer_form">
       <h2>Chci doučování</h2>
       <form class="" action="/form" method="post">
-        <div class="formSection">
-          <h3 for="name">Jméno: </h3>
-          <input type="text" name="name" value="">
-        </div>
-
-        <br>
-        <div class="formSection">
-          <h3 for="email">E-mail: </h3>
-          <input type="text" name="email" value="">
+        <div class="table formSection">
+          <div class="tableCol topTextInput">
+            <h3 for="name">Jméno: </h3>
+            <input type="text" name="name" value="">
+          </div>
+          <div class="tableCol topTextInput">
+            <h3 for="email">E-mail: </h3>
+            <input type="text" name="email" value="">
+          </div>
         </div>
 
         <br>
@@ -63,7 +67,7 @@
                 <br>
                 <button type="button" name="subject" data-value="nemina">Německý jazyk</button>
                 <br>
-                <button type="button" name="subject" data-value="cestina">Čeština</button>
+                <button type="button" name="subject" data-value="cestina">Český jazyk</button>
               </li>
               <li class="tableCol">
                 <button type="button" name="subject" data-value="zemak">Zeměpis</button>
@@ -83,19 +87,19 @@
           <h3>Úroveň: </h3>
           <ul class="table radio">
             <li class="tableCol">
-              <button type="button" name="lvl" class="selectedButton"  data-value="1-5zš">1. stupeň zš</button>
+              <button type="button" name="lvl" class="selectedButton" data-value="1-5zš">1. Stupeň ZŠ</button>
               <br>
-              <button type="button" name="lvl" data-value="přijímačky-střední">přijímačky na střední</button>
+              <button type="button" name="lvl" data-value="přijímačky-střední">Přijímací zkoušky na střední školu</button>
             </li>
             <li class="tableCol">
-              <button type="button" name="lvl" data-value="6-9zš">2. stupeň zš</button>
+              <button type="button" name="lvl" data-value="6-9zš">2. Stupeň ZŠ</button>
               <br>
-              <button type="button" name="lvl" data-value="1-2střední">1. a 2. ročník střední školy</button>
+              <button type="button" name="lvl" data-value="1-2střední">1. a 2. Ročník SŠ</button>
             </li>
             <li class="tableCol">
-              <button type="button" name="lvl" data-value="přijímačky-8-let-gympl">přijímačky na 8 let gympl</button>
+              <button type="button" name="lvl" data-value="přijímačky-8-let-gympl">Přijímací zkoušky na 8 leté gymnázium</button>
               <br>
-              <button type="button" name="lvl" data-value="3-4střední">3. a 4. ročník střední školy</button>
+              <button type="button" name="lvl" data-value="3-4střední">3. a 4. Ročník SŠ</button>
 
             </li>
           </ul>
@@ -148,25 +152,25 @@
     </div>
 
     <div class="hidden" id="SuccesfulForm">
-      <p>Vas formular byl uspesne odeslan</p>
+      <p>Váš formulář byl úspěšně odeslán!</p>
       <button type="button" name="button" onclick="hideSuccessfulForm()">zpet</button>
     </div>
 
 
     <hr>
     <div class="section_wrapper">
-      <h2 id="References">Reference</h2>
-      <button type="button" name="button" class="nextSlide" onclick="nextSlide('#Ref-owl-carousel')">prev</button>
+      <h2 id="References">Co o nás říkají</h2>
       <div id="Ref-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
-        <div class="carousel-item"> Your Content 1</div>
-        <div class="carousel-item"> Your Content 2</div>
-        <div class="carousel-item"> Your Content 3</div>
-        <div class="carousel-item"> Your Content 4</div>
-        <div class="carousel-item"> Your Content 5</div>
-        <div class="carousel-item"> Your Content 6</div>
-        <div class="carousel-item"> Your Content 7</div>
+        <div class="carousel-item textLong"> Na rychlým doučku oceňuji hlavně vřelý přístup. Není nic lepšího, než když k vám dorazí mladý doučovatel, který ví o čem mluví, ale hlavně, chce vás to naučit. Nepřipadal jsem si na obtíž jako s jinými
+          učiteli. Moc
+          vám děkuju. <span>~Petr~</span> </div>
+        <div class="carousel-item textLong"> Dříve jsem si sháněla doučování na velkých stránkách, kde jsem ale nebyla úplně spokojená. Naštěstí mi kamarádka doporučila tuhle skvělou skupinu. Paní přišla, promluvily jsme si o našich cílech a odborným
+          ale
+          pochopitelným způsobem naučila angličtinu. Mohu jen doporučit dále. <span>~Klára~</span></div>
+        <div class="carousel-item textLong"> Davida fakt mohu doporučit všem, co se v matice ztrácejí a plavou. Velmi ochotným a lehkým způsobem mi pomohl látku pochopit a naučit tak, jak to učitel nezvládl za měsíc.
+          Především mu moc děkuji za jeho trpělivost a to, že mě naučil rozumět matice, ale i ji mít trochu ráda!
+          Díky jeho pomoci se se mi známky zlepšily o 2 stupně. <span>~Kačka~</span></div>
       </div>
-      <button type="button" name="button" class="prevSlide" onclick="prevSlide('#Ref-owl-carousel')">next</button>
 
     </div>
 
@@ -174,48 +178,72 @@
 
     <div class="section_wrapper">
       <h2 id="Lectors">Lektoři</h2>
-      <button type="button" name="button" class="nextSlide" onclick="nextSlide('#Lector-owl-carousel')">prev</button>
       <div id="Lector-owl-carousel" class="owl-carousel owl-theme carousel-wrapper">
-        <div class="carousel-item"> Your Content 1</div>
-        <div class="carousel-item"> Your Content 2</div>
-        <div class="carousel-item"> Your Content 3</div>
-        <div class="carousel-item"> Your Content 4</div>
-        <div class="carousel-item"> Your Content 5</div>
-        <div class="carousel-item"> Your Content 6</div>
-        <div class="carousel-item"> Your Content 7</div>
+        <div class="carousel-item textLong"> Jsem student gymnázia v Plzni a zeměpis mě baví od první hodiny. Místa, o kterých jsem se učil na hodinách, rád navštěvuji, abych věděl, o čem mluvím. Pokud potřebujete pomoci s výukou zeměpisu, budu rád,
+          když si
+          vyberete právě nás.
+          <span>~Ondřej~</span></div>
+        <div class="carousel-item textLong"> Doučuji anglický a německý jazyk.
+          Jazyky mě velmi baví a ráda ostatním poradím.
+          Důkazem mých schopností jsou úspěšně složené zkoušky z anglického jazyka FCE na úrovni C1 a z německého jazyka DSD 1 na úrovni B1. Těším se na naše první setkání.
+          <span>~Lenka~</span>
+        </div>
+        <div class="carousel-item textLong"> Doučuji češtinu malé i velké. Ráda Vám také pomůžu s angličtinou (příprava na Cambridgské (FCE) zkoušky, anglická konverzace, vysvětlení látky, oprava esejí a jiných psaných prací). Dokladem mých znalostí
+          je
+          certifikát Cambridge FCE s úrovní C1.
+          <span>~Sára~</span>
+        </div>
+        <div class="carousel-item textLong"> Spousta z nás má k matematice a fyzice negativní vztah. Připadají nám nesmyslné, nebo z nich dokonce máme trochu strach. Myslím si, že to způsobeno špatným přístupem běžných učitelů. Rád bych tyto chyby
+          napravil,
+          jednoduše vysvětlil látku a naučil vnímat svět jiným způsobem. Matematika může být opravdu krásná.
+          <span>~David~</span></div>
       </div>
-      <button type="button" name="button" class="prevSlide" onclick="prevSlide('#Lector-owl-carousel')">next</button>
     </div>
     <hr>
+    <div class="section_wrapper">
+      <h2>FAQ</h2>
+      <div id="FAQ">
+        <div class="questions">
+          <ul class="table">
+            <li class="tableCol">
+              <button id="FAQ1" class="FAQquestion selectedButton">Kolik to stojí? </button>
+            </li>
+            <li class="tableCol">
+              <button id="FAQ2" class="FAQquestion">Jak to funguje? </button>
+            </li>
 
-    <div class="section_wrapper" id="FAQ">
-
-      <div>
-        <button id="FAQ1" class="FAQquestion selectedButton">Kolik to stojí? </button>
-        <button id="FAQ2" class="FAQquestion">Jak to funguje? </button>
-        <button id="FAQ3" class="FAQquestion">Jak doučování probíhá? </button>
-        <button id="FAQ4" class="FAQquestion">Přijede lektor až ke mně domů? </button>
-        <button id="FAQ5" class="FAQquestion">Co když nebudu spokojený/á s lektorem?</button>
-
+            <li class="tableCol">
+              <button id="FAQ3" class="FAQquestion">Jak doučování probíhá? </button>
+            </li>
+          </ul>
+          <ul class="table">
+            <li class="tableCol">
+              <button id="FAQ4" class="FAQquestion">Přijede lektor až ke mně domů? </button>
+            </li>
+            <li class="tableCol">
+              <button id="FAQ5" class="FAQquestion">Co když nebudu spokojený/á s lektorem?</button>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="textLong">
+            <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 130 do 180 Kč za 60
+              minut
+              výuky.</li>
+            <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje
+              prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
+            <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum. Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového
+              doučování s osnovou dané lekce. Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
+            <li id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </li>
+            <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám
+              vrácení peněz za uplynulou lekci.</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <ul>
-          <li id="Answer1" class="FAQanswer">Cena je vždy sestavena individuálně na základě Vaší poptávky. Umožňuje nám to vytvořit ideální prostředí jak pro studenta, tak pro lektora. Pro hrubou představu, cena se pohybuje od 130 do 180 Kč za 60 minut
-            výuky.</li>
-          <li id="Answer2" class="FAQanswer hidden">Pokud jste se rozhodli využít našich služeb, vyplňte prosím formulář v úvodu stránky. Bude Vám vybrán lektor, jehož možnosti a schopnosti nejvíce odpovídají Vašim požadavkům. Ten Vás kontaktuje
-            prostřednictvím e-mailu či telefonního čísla a domluvíte se na podrobnostech setkání.</li>
-          <li id="Answer3" class="FAQanswer hidden">Před začátkem prvního doučování se Vás lektor zeptá na pár otázek, které Vám pomůžou vytěžit z doučování maximum. Seznámíte se s osnovou vyučování na několik lekcí dopředu, v případě jednorázového
-            doučování s osnovou dané lekce. Během samotné výuky lektor mimo jiné vysvětluje spojitosti a širší kontext různých celků probírané látky a její použití v praxi.</li>
-          <li id="Answer4" class="FAQanswer hidden">Ano, pokud se Vaše bydliště nachází v Plzni, lektor přijede až za Vámi domů. V případě zájmu, není problém setkat se někde v Plzni, např. v kavárně. Vše záleží na domluvě s lektorem. </li>
-          <li id="Answer5" class="FAQanswer hidden">Nevyhovuje Vám ze závažných důvodů přidělený lektor? Stačí nás kontaktovat prostřednictvím e-mailu. Uděláme maximum pro rychlou výměnu lektorů, a pokud to nebude v našich silách, garantujeme Vám
-            vrácení peněz za uplynulou lekci.</li>
-        </ul>
-      </div>
-
-
     </div>
   </div>
-
+  <div id="Footer">
+  </div>
 
 
   <script src="jquery.min.js"></script>
