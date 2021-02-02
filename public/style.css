@@ -12,6 +12,10 @@ form {
   padding-right: 15%;
 }
 
+#Logo{
+  font-family: paciffico
+}
+
 .textLong {
   border-radius: 40px;
   border-color: #17252A;
@@ -27,6 +31,94 @@ form {
 
 .body_wrapper.topSection {
   background-color: #DEF2F1;
+}
+
+.lightSectionSvgLight{
+  position: absolute;
+}
+
+.lightSectionSvgDark{
+  position: absolute;
+}
+
+.lightSectionSvgLight rect{
+  fill:#DEF2F1;
+  stroke-width:1.3px;
+  stroke:#2B7A78;
+}
+
+.lightSectionSvgLight path{
+  fill:#2B7A78;
+  stroke-width:1px;
+  stroke:#DEF2F1;
+}
+
+.lightSectionSvgLight circle{
+  fill:#DEF2F1;
+  stroke-width:1px;
+  stroke:#2B7A78;
+}
+
+.lightSectionSvgDark rect{
+  fill:#2B7A78;
+  stroke-width:1.3px;
+  stroke:#DEF2F1;
+}
+
+.lightSectionSvgDark path{
+  fill:#3AAFA9;
+  stroke-width:1px;
+  stroke:#DEF2F1;
+}
+
+.lightSectionSvgDark circle{
+  fill:#DEF2F1;
+  stroke-width:1px;
+  stroke:#2B7A78;
+}
+
+.darkSectionSvgLight{
+  position: absolute;
+}
+
+.darkSectionSvgDark{
+  position: absolute;
+}
+
+.darkSectionSvgDark rect{
+  fill:#DEF2F1;
+  stroke-width:1.3px;
+  stroke:#2B7A78;
+}
+
+.darkSectionSvgDark path{
+  fill:#2B7A78;
+  stroke-width:2px;
+  stroke:#2B7A78;
+}
+
+.darkSectionSvgDark circle{
+  fill:#3AAFA9;
+  stroke-width:1px;
+  stroke:#2B7A78;
+}
+
+.darkSectionSvgLight rect{
+  fill:#DEF2F1;
+  stroke-width:1.3px;
+  stroke:#DEF2F1;
+}
+
+.darkSectionSvgLight path{
+  fill:#DEF2F1;
+  stroke-width:1px;
+  stroke:#3AAFA9;
+}
+
+.darkSectionSvgLight circle{
+  fill:#3AAFA9;
+  stroke-width:1px;
+  stroke:#DEF2F1;
 }
 
 #About_us .textLong {
@@ -55,10 +147,10 @@ form {
   overflow: hidden;
 }
 
+
 #HeaderWave path {
   stroke: none;
   fill: #DEF2F1;
-  ;
 }
 
 #Customer_form {
@@ -151,11 +243,17 @@ button {
 
 .carousel-item {
   display: block;
-  text-align: center;
 }
 
-.arrows{
-  display: contents;
+.carousel-item.textLong{
+  text-align: left;
+}
+
+button.arrows{
+  margin-right: 2dark
+  margin-left: 2%;
+  border: none;
+  background: none;
 }
 
 .body_wrapper {
@@ -267,6 +365,7 @@ td>button {
 
 #FAQ .textLong p{
   vertical-align: middle;
+  text-align: left;
 }
 
 #SuccesfulForm {
@@ -294,7 +393,8 @@ td>button {
 #FooterWave {
   display: block;
   position: relative;
-  width: 100%;
+  width: 101%;
+  margin-left: -1%;
   /*  padding-bottom: 100%;*/
   padding: 0;
   vertical-align: middle;
@@ -311,7 +411,7 @@ td>button {
   position: relative;
   width: 100%;
   height: 10px;
-  bottom: 6px;
+  bottom: 20px;
   background-color: #17252A;
 }
 
@@ -319,6 +419,30 @@ td>button {
   width: 100%;
   height: 250px;
   background-color: #17252A;
-  font-weight: bold;
+  font-weight: normal;
   color: #DEF2F1;
+}
+
+#Footer h3 {
+  font-size: 22px;
+  color: #DEF2F1;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 12%;
+}
+
+#Footer h4 {
+  font-size: 17px;
+  color: #DEF2F1;
+  font-weight: normal;
+}
+
+#leftFooter{
+  margin-left: 12%;
+}
+
+.footerContent{
+  display: inline-block;
+  margin-left: 2.5%;
 }
