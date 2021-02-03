@@ -12,9 +12,27 @@ form {
   padding-right: 15%;
 }
 
-#Logo{
-  font-family: paciffico
+.logo-container{
+  font-family: Pacifico;
+  position: absolute;
+  font-size: 20px;
 }
+
+li.logo-container{
+  right: 5%;
+}
+
+div.logo-container{
+  position: inherit;
+  vertical-align: super;
+  margin-left: 35%;
+}
+
+.logo-container p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 
 .textLong {
   border-radius: 40px;
