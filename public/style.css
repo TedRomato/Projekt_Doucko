@@ -1,12 +1,13 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  font-size: 25px;
-  background-color: #3AAFA9;
-  color: #17252A;
-  padding-bottom: 0;
-}
 
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 25px;
+    background-color: #3AAFA9;
+    color: #17252A;
+    padding-bottom: 0;
+  }
 
 
 .logo-container{
@@ -18,6 +19,7 @@ body {
 li.logo-container{
   right: 5%;
 }
+
 @media only screen and (min-width: 768px) {
   div.logo-container{
     position: inherit;
@@ -25,6 +27,7 @@ li.logo-container{
     margin-left: 25%;
     }
   }
+
 @media only screen and (min-width: 992px) {
   div.logo-container{
     position: inherit;
@@ -275,15 +278,25 @@ button {
 }
 
 button.arrows{
-  margin-right: 2dark
+  margin-right: 2%;
   margin-left: 2%;
   border: none;
   background: none;
 }
 
-.body_wrapper {
-  padding: 10%;
-  padding-bottom: 0;
+@media only screen and (min-width: 768px) {
+  .body_wrapper {
+    padding: 4%;
+    padding-top: 10%;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .body_wrapper {
+    padding: 10%;
+    padding-bottom: 0;
+  }
 }
 
 .body_wrapper div {
