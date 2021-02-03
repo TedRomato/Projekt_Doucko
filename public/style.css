@@ -155,12 +155,14 @@ div.logo-container{
   padding-bottom: 5%;
 }
 
+
 #HeaderWave {
   display: block;
   position: relative;
   width: 100%;
   /*  padding-bottom: 100%;*/
   padding: 0;
+  bottom: 10px;
   vertical-align: middle;
   overflow: hidden;
 }
@@ -428,8 +430,8 @@ td>button {
 #FooterWavePatch {
   position: relative;
   width: 100%;
-  height: 10px;
-  bottom: 20px;
+  height: 20px;
+  bottom: 10px;
   background-color: #17252A;
 }
 
