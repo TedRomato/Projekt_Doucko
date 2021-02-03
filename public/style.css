@@ -35,10 +35,14 @@ form {
 
 .lightSectionSvgLight{
   position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .lightSectionSvgDark{
   position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .lightSectionSvgLight rect{
