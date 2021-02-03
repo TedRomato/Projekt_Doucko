@@ -7,10 +7,7 @@ body {
   padding-bottom: 0;
 }
 
-form {
-  padding-left: 15%;
-  padding-right: 15%;
-}
+
 
 .logo-container{
   font-family: Pacifico;
@@ -21,12 +18,20 @@ form {
 li.logo-container{
   right: 5%;
 }
-
-div.logo-container{
-  position: inherit;
-  vertical-align: super;
-  margin-left: 35%;
-}
+@media only screen and (min-width: 768px) {
+  div.logo-container{
+    position: inherit;
+    vertical-align: super;
+    margin-left: 25%;
+    }
+  }
+@media only screen and (min-width: 992px) {
+  div.logo-container{
+    position: inherit;
+    vertical-align: super;
+    margin-left: 35%;
+    }
+  }
 
 .logo-container p{
     margin-top: 0;

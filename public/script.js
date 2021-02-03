@@ -24,7 +24,7 @@ $(".FAQquestion").click(function(event) {
 });
 
 /*carousels*/
-let settings = {loop:true, dots:false, slideBy:1,items:3,responsive : {
+let settings = {loop:true, dots:false, slideBy:1,items:3,responsive:{
       //breakpoint from 0 and up
       0 : {
          items : 1,
