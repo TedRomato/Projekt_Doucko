@@ -24,7 +24,23 @@ $(".FAQquestion").click(function(event) {
 });
 
 /*carousels*/
-let settings = {loop:true, dots:false, slideBy:1};
+let settings = {loop:true, dots:false, slideBy:1,items:3,responsive : {
+      //breakpoint from 0 and up
+      0 : {
+         items : 1,
+      },
+      // add as many breakpoints as desired , breakpoint from 480 up
+      480 : {
+         items:1,
+      },
+      // breakpoint from 768 up
+      768 : {
+          items:2,
+      },
+      1080:{
+          items:3,
+      },
+  }};
 $(document).ready(function(){
   $("#Ref-owl-carousel").owlCarousel(settings);
   $("#Lector-owl-carousel").owlCarousel(settings);
@@ -65,6 +81,8 @@ $(".radio button, .select button").click(function(){
 
   $("#Czech_warning").addClass("hidden");
   $("#German_warning").addClass("hidden");
+  $("#Chemistry_warning").addClass("hidden");
+
 
   $('button[name="subject"].selectedButton').each(function( index ) {
     if($(this).attr('data-value') == "cestina"){
@@ -75,6 +93,11 @@ $(".radio button, .select button").click(function(){
     if($(this).attr('data-value') == "nemina"){
       if(lvl == "3-4střední"){
         $("#German_warning").removeClass("hidden");
+      }
+    }
+    if($(this).attr('data-value') == "chemie"){
+      if(lvl == "3-4střední"){
+        $("#Chemistry_warning").removeClass("hidden");
       }
     }
   });
@@ -111,6 +134,8 @@ function resetForm(){
   $("button[data-value='1-5zš']").addClass("selectedButton");
   $("button[data-value='once']").addClass("selectedButton");
   $("#German_warning").addClass("hidden");
+  $("#Czech_warning").addClass("hidden");
+  $("#Chemistry_warning").addClass("hidden");
   $("#FAQ1").addClass("selectedButton");
   $(".FAQanswer").addClass("hidden");
   $("#Answer1").removeClass("hidden");
