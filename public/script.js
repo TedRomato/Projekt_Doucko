@@ -83,7 +83,7 @@ $(window).scroll(function(){
   if($( window ).width() < 768){
     var nowScrollTop = $(this).scrollTop();
     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-     if (nowScrollTop > lastScrollTop && $(window).scrollTop() > 50){
+     if (nowScrollTop > lastScrollTop && $(window).scrollTop() > 75){
        $("#Navbar").addClass("hidden");
        $("#Navbar ul li").each(function( index ) {
          if(index > 0 && index < 5){
@@ -95,6 +95,18 @@ $(window).scroll(function(){
      }
     lastScrollTop = nowScrollTop;
     }
+  }
+});
+
+$("input[name='email']").on("input", function(){
+  if($(this).val().length > 0 && $(this).val().includes("@")){
+    $("#Email_warning").addClass("hidden");
+  }
+});
+
+$("input[name='name']").on("input", function(){
+  if($(this).val().length > 0){
+    $("#Name_warning").addClass("hidden");
   }
 });
 
@@ -158,6 +170,12 @@ $("form").submit(function(e){
     scrollToElement("#Czech_warning");
   }else if(!$("#Chemistry_warning").hasClass("hidden")){
     scrollToElement("#Chemistry_warning");
+  }else if($("input[name='name']").val().length == 0){
+    $("#Name_warning").removeClass("hidden");
+    scrollToElement("#Name_warning");
+  }else if($("input[name='email']").val().length == 0 || !$("input[name='email']").val().includes("@")){
+    $("#Email_warning").removeClass("hidden");
+    scrollToElement("#Email_warning");
   }else{
     $.ajax({
        type: $(this).attr('method'),
@@ -182,6 +200,8 @@ function resetForm(){
   $("button[data-value='once']").addClass("selectedButton");
   $("#German_warning").addClass("hidden");
   $("#Czech_warning").addClass("hidden");
+  $("#Email_warning").addClass("hidden");
+  $("#Name_warning").addClass("hidden");
   $("#Chemistry_warning").addClass("hidden");
   $("#FAQ1").addClass("selectedButton");
   $(".FAQanswer").addClass("hidden");
