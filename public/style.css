@@ -1,6 +1,6 @@
 
 
-  body {
+body {
     font-family: sans-serif;
     margin: 0;
     font-size: 25px;
@@ -59,104 +59,9 @@ li.logo-container{
   background-color: #DEF2F1;
 }
 
-<<<<<<< HEAD
-.lightSectionSvgLight{
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.lightSectionSvgDark{
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.lightSectionSvgLight rect{
-  fill:#DEF2F1;
-  stroke-width:1.3px;
-  stroke:#2B7A78;
-}
-
-.lightSectionSvgLight path{
-  fill:#2B7A78;
-  stroke-width:1px;
-  stroke:#DEF2F1;
-}
-
-.lightSectionSvgLight circle{
-  fill:#DEF2F1;
-  stroke-width:1px;
-  stroke:#2B7A78;
-}
-
-.lightSectionSvgDark rect{
-  fill:#2B7A78;
-  stroke-width:1.3px;
-  stroke:#DEF2F1;
-}
-
-.lightSectionSvgDark path{
-  fill:#3AAFA9;
-  stroke-width:1px;
-  stroke:#DEF2F1;
-}
-
-.lightSectionSvgDark circle{
-  fill:#DEF2F1;
-  stroke-width:1px;
-  stroke:#2B7A78;
-}
-
-.darkSectionSvgLight{
-  position: absolute;
-}
-
-.darkSectionSvgDark{
-  position: absolute;
-}
-
-.darkSectionSvgDark rect{
-  fill:#DEF2F1;
-  stroke-width:1.3px;
-  stroke:#2B7A78;
-}
-
-.darkSectionSvgDark path{
-  fill:#2B7A78;
-  stroke-width:2px;
-  stroke:#2B7A78;
-}
-
-.darkSectionSvgDark circle{
-  fill:#3AAFA9;
-  stroke-width:1px;
-  stroke:#2B7A78;
-}
-
-.darkSectionSvgLight rect{
-  fill:#DEF2F1;
-  stroke-width:1.3px;
-  stroke:#DEF2F1;
-}
-
-.darkSectionSvgLight path{
-  fill:#DEF2F1;
-  stroke-width:1px;
-  stroke:#3AAFA9;
-}
-
-.darkSectionSvgLight circle{
-  fill:#3AAFA9;
-  stroke-width:1px;
-  stroke:#DEF2F1;
-}
-=======
->>>>>>> 2a19513f0e477d966c01ce16a9d5a010dffd0d1c
-
 @media only screen and (min-width: 0px) {
   #About_us {
-    padding-top: 25%;
+    padding-top: 18%;
     padding-bottom: 0%;
   }
   #About_us .textLong {
@@ -164,7 +69,7 @@ li.logo-container{
     background-color: #DEF2F1;
     color: #17252A;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 13px;
     padding: 10%;
     margin-left: 0%;
     margin-right: 0%;
@@ -532,7 +437,7 @@ h3 {
     padding-bottom: 2.5%;
   }
   h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
