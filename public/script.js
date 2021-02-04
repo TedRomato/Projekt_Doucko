@@ -149,11 +149,15 @@ $(".radio button, .select button").click(function(){
 $("form").submit(function(e){
   e.preventDefault();
   if (!$("#CheckboxWarning").hasClass("hidden")){
-    scrollToElement("#SubjectsDiv");
+    scrollToElement("#CheckboxWarning");
     return;
-  }else if(!$("#German_warning").hasClass("hidden") || !$("#Czech_warning").hasClass("hidden")){
-    scrollToElement("#SubjectsDiv");
+  }else if(!$("#German_warning").hasClass("hidden")){
+    scrollToElement("#German_warning");
     return;
+  }else if(!$("#Czech_warning").hasClass("hidden")){
+    scrollToElement("#Czech_warning");
+  }else if(!$("#Chemistry_warning").hasClass("hidden")){
+    scrollToElement("#Chemistry_warning");
   }else{
     $.ajax({
        type: $(this).attr('method'),

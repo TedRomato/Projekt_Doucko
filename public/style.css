@@ -453,7 +453,6 @@ h3 {
 }
 
 
-
 hr {
   width: 80%;
   height: 1px;
@@ -566,12 +565,23 @@ td>button {
   text-align: justify;
 }
 
+.warning{
+  color:#17252A;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .warning{
+    font-size: 18px;
+  }
+}
+
 #SuccesfulForm {
   position: fixed;
   top: 40%;
   bottom: 40%;
-  left: 40%;
-  right: 40%;
+  left: 10%;
+  right: 10%;
   padding: 1%;
   border-radius: 40px;
   border-color: #2B7A78;
@@ -581,6 +591,22 @@ td>button {
   color: #17252A;
   margin-bottom: 10px;
   z-index: 100;
+}
+
+@media only screen and (min-width: 768px) {
+  #SuccesfulForm {
+    position: fixed;
+    left: 20%;
+    right: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #SuccesfulForm {
+    position: fixed;
+    left: 40%;
+    right: 40%;
+  }
 }
 
 #SuccesfulForm p {
