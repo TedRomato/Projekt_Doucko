@@ -66,6 +66,7 @@ function collapseNav(){
   });
 }
 
+
 $( window ).resize(function() {
   if($( window ).width() > 768){
     $("#Navbar ul li").each(function( index ) {
@@ -73,6 +74,27 @@ $( window ).resize(function() {
         $(this).addClass("hidden");
       }
     });
+  }
+});
+
+
+var lastScrollTop = 0, delta = 5;
+$(window).scroll(function(){
+  if($( window ).width() < 768){
+    var nowScrollTop = $(this).scrollTop();
+    if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+     if (nowScrollTop > lastScrollTop){
+       $("#Navbar").addClass("hidden");
+       $("#Navbar ul li").each(function( index ) {
+         if(index > 0 && index < 5){
+           $(this).addClass("hidden");
+         }
+       });
+     } else {
+       $("#Navbar").removeClass("hidden");
+     }
+    lastScrollTop = nowScrollTop;
+    }
   }
 });
 
