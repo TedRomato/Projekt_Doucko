@@ -37,7 +37,7 @@ let settings = {loop:true, dots:false, slideBy:1,items:3,responsive:{
       768 : {
           items:2,
       },
-      992 :{
+      1080:{
           items:3,
       },
   }};
