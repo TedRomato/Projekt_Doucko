@@ -32,7 +32,7 @@ li.logo-container{
   div.logo-container{
     position: inherit;
     vertical-align: super;
-    margin-left: 35%;
+    right: 5%;
     }
   }
 
@@ -48,7 +48,6 @@ li.logo-container{
   border-style: solid;
   background-color: #2B7A78;
   padding: 20px;
-  font-size: 15px;
   color: #DEF2F1;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -165,7 +164,7 @@ li.logo-container{
     background-color: #DEF2F1;
     color: #17252A;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 12px;
     padding: 10%;
     margin-left: 0%;
     margin-right: 0%;
@@ -176,6 +175,9 @@ li.logo-container{
   }
   .body_wrapper.topSection{
     padding-bottom: 5%;
+  }
+  .textLong{
+    font-size: 12px;
   }
 }
 
@@ -193,6 +195,9 @@ li.logo-container{
     padding: 5%;
     margin-left: 18%;
     margin-right: 18%;
+  }
+  .textLong{
+    font-size: 15px;
   }
 }
 
@@ -479,10 +484,9 @@ button.arrows{
     height: 52px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size:14px;
     border-radius: 150px;
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 12px;
   }
   .selectedButton {
     border-color: #DEF2F1;
@@ -499,7 +503,6 @@ button.arrows{
     height: 120px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 16px;
     border-radius: 150px;
     margin-bottom: 10px;
     font-size: 15px;
@@ -509,6 +512,11 @@ button.arrows{
     background-color: #2B7A78;
     color: #FEFFFF;
   }
+}
+
+h3 {
+  color: #17252A;
+  font-weight: normal;
 }
 
 @media only screen and (min-width: 0px) {
@@ -523,21 +531,23 @@ button.arrows{
     text-align: left;
     padding-bottom: 2.5%;
   }
+  h3 {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   h2 {
     text-align: left;
     padding-bottom: 2.5%;
-    font-size: inherit;
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 25px;
   }
 }
 
-h3 {
-  font-size: 25px;
-  color: #17252A;
-  font-weight: normal;
-}
+
 
 hr {
   width: 80%;
@@ -565,7 +575,7 @@ td>button {
   #FAQ {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
   }
 
   #FooterWavePatch {
@@ -602,7 +612,7 @@ td>button {
     height: 60px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 12px;
     border-radius: 150px;
     vertical-align: top;
   }
@@ -630,7 +640,7 @@ td>button {
     font-family: sans-serif;
   }
   .logo-container.footerContent{
-    display: default;
+    display: inline-block;
   }
 }
 
