@@ -97,7 +97,7 @@ li.logo-container{
     background-color: #DEF2F1;
     color: #17252A;
     border-radius: 50px;
-    font-size: 22px;
+    font-size: 18px;
     padding: 5%;
     margin-left: 18%;
     margin-right: 18%;
@@ -497,7 +497,7 @@ td>button {
   #FAQ {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
   }
 
   #FooterWavePatch {
