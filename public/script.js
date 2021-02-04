@@ -83,7 +83,7 @@ $(window).scroll(function(){
   if($( window ).width() < 768){
     var nowScrollTop = $(this).scrollTop();
     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-     if (nowScrollTop > lastScrollTop){
+     if (nowScrollTop > lastScrollTop && $(window).scrollTop() > 50){
        $("#Navbar").addClass("hidden");
        $("#Navbar ul li").each(function( index ) {
          if(index > 0 && index < 5){
