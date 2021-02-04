@@ -54,6 +54,28 @@ function prevSlide(carousel){
   $(carousel).owlCarousel().trigger('prev.owl.carousel');
 }
 
+function collapseNav(){
+  $("#Navbar ul li").each(function( index ) {
+    if(index > 0 && index < 5){
+      if($(this).hasClass("hidden")){
+        $(this).removeClass("hidden");
+      }else{
+        $(this).addClass("hidden");
+      }
+    }
+  });
+}
+
+$( window ).resize(function() {
+  if($( window ).width() > 768){
+    $("#Navbar ul li").each(function( index ) {
+      if(index > 0 && index < 5){
+        $(this).addClass("hidden");
+      }
+    });
+  }
+});
+
 $(".select button").click(function(){
   if($(this).hasClass("selectedButton")){
     $(this).removeClass("selectedButton")
@@ -61,7 +83,6 @@ $(".select button").click(function(){
     $(this).addClass("selectedButton");
   }
 });
-
 
 $(".radio button").click(function(){
   	$(this).parent().parent().addClass("usedRadio");

@@ -20,7 +20,7 @@ li.logo-container{
   right: 5%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 0px) {
   div.logo-container{
     position: inherit;
     vertical-align: super;
@@ -28,7 +28,7 @@ li.logo-container{
     }
   }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   div.logo-container{
     position: inherit;
     vertical-align: super;
@@ -59,6 +59,7 @@ li.logo-container{
   background-color: #DEF2F1;
 }
 
+<<<<<<< HEAD
 .lightSectionSvgLight{
   position: absolute;
   -webkit-backface-visibility: hidden;
@@ -150,23 +151,48 @@ li.logo-container{
   stroke-width:1px;
   stroke:#DEF2F1;
 }
+=======
+>>>>>>> 2a19513f0e477d966c01ce16a9d5a010dffd0d1c
 
-#About_us .textLong {
-  border-color: #2B7A78;
-  background-color: #DEF2F1;
-  color: #17252A;
-  border-radius: 50px;
-  font-size: 22px;
-  padding: 5%;
-  margin-left: 18%;
-  margin-right: 18%;
+@media only screen and (min-width: 0px) {
+  #About_us {
+    padding-top: 25%;
+    padding-bottom: 0%;
+  }
+  #About_us .textLong {
+    border-color: #2B7A78;
+    background-color: #DEF2F1;
+    color: #17252A;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #About_us p.textLong{
+    margin-bottom: 0
+  }
+  .body_wrapper.topSection{
+    padding-bottom: 5%;
+  }
 }
 
-#About_us {
-  padding-top: 5%;
-  padding-bottom: 5%;
+@media only screen and (min-width: 768px) {
+  #About_us {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  #About_us .textLong {
+    border-color: #2B7A78;
+    background-color: #DEF2F1;
+    color: #17252A;
+    border-radius: 50px;
+    font-size: 22px;
+    padding: 5%;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
 }
-
 
 #HeaderWave {
   display: block;
@@ -174,7 +200,7 @@ li.logo-container{
   width: 100%;
   /*  padding-bottom: 100%;*/
   padding: 0;
-  bottom: 10px;
+  bottom: 3px;
   vertical-align: middle;
   overflow: hidden;
 }
@@ -210,10 +236,25 @@ textarea {
   border-style: solid;
   padding: 15px;
   background-color: #DEF2F1;
-  height: 100px;
-  width: 250px;
   resize: none;
 }
+
+@media only screen and (min-width: 0px) {
+  textarea {
+    font-size: 12px;
+    height:60px;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  textarea {
+    font-size: 16px;
+    height: 100px;
+    width: 250px;
+  }
+}
+
 
 input:focus, textarea:focus, select:focus {
   outline: none;
@@ -232,6 +273,78 @@ button:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+
+@media only screen and (min-width: 0px){
+  #Navbar li {
+    font-size: 20px;
+    display: block;
+    padding-right: 1%;
+    padding-left: 1%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    border-top: 1px solid;
+    border-color: #DEF2F1;
+  }
+  #Navbar li.hidden {
+    display: none;
+  }
+  #Navbar svg{
+    width:30px;
+    height:30px;
+  }
+  #NavCollapse{
+    fill:#DEF2F1;
+  }
+  #Navbar ul {
+    list-style: none;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #Navbar ul li:first-child {
+    border-top: 0px;
+  }
+  #Navbar ul li:last-child {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #Navbar li {
+    border-top: 0px solid;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0;
+    padding-right: 1%;
+    padding-left: 1%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+  }
+  #Navbar svg{
+    width:32px;
+    height:32px;
+  }
+  #NavCollapse{
+    display: none;
+  }
+  #Navbar #NavCollapse svg{
+    display: none;
+  }
+  #Navbar ul {
+    list-style: none;
+    padding-left: 1%;
+    padding-right: 0%;
+  }
+  #Navbar ul li:last-child {
+    display: inline-block;
+  }
+
+  #Navbar li.hidden {
+    display: inline-block;
+  }
+}
+
 #Navbar {
   position: fixed;
   top: 0;
@@ -242,17 +355,6 @@ button:focus, textarea:focus, select:focus {
   color: #DEF2F1;
 }
 
-#Navbar ul {
-  list-style: none;
-}
-
-#Navbar li {
-  display: inline-block;
-  padding-right: 1%;
-  padding-left: 1%;
-  text-align: center;
-  vertical-align: middle;
-}
 
 li:hover {
   cursor: default;
@@ -288,15 +390,15 @@ button.arrows{
   background: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 0px) {
   .body_wrapper {
     padding: 4%;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .body_wrapper {
     padding: 10%;
     padding-bottom: 0;
@@ -312,11 +414,45 @@ button.arrows{
   font-size: 25px;
 }
 
+@media only screen and (min-width: 0px) {
+  .table {
+    width: auto;
+    display: block;
+    /* optional, for equal spacing */
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .tableCol {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .table {
+    width: auto;
+    display: table;
+    table-layout: fixed;
+    /* optional, for equal spacing */
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  .tableCol {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+  }
+  }
+/*
 .table {
   width: auto;
   display: table;
   table-layout: fixed;
-  /* optional, for equal spacing */
   border-collapse: collapse;
   margin: 0 auto;
 }
@@ -326,28 +462,62 @@ button.arrows{
   text-align: center;
   vertical-align: middle;
   list-style: none;
+}*/
+
+@media only screen and (min-width: 0px) {
+  .tableCol>button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 90%;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 150px;
+  }
+  .selectedButton {
+    border-color: #DEF2F1;
+    background-color: #2B7A78;
+    color: #FEFFFF;
+  }
 }
 
-.tableCol>button {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 150px;
-  height: 120px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 16px;
-  border-radius: 150px;
+@media only screen and (min-width: 768px) {
+  .tableCol>button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 150px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 150px;
+  }
+  .selectedButton {
+    border-color: #DEF2F1;
+    background-color: #2B7A78;
+    color: #FEFFFF;
+  }
 }
 
-.selectedButton {
-  border-color: #DEF2F1;
-  background-color: #2B7A78;
-  color: #FEFFFF;
+@media only screen and (min-width: 0px) {
+  h2 {
+    display: block;
+    text-align: center;
+    padding-bottom: 2.5%;
+  }
+  li h2 {
+    display: block;
+    text-align: left;
+    padding-bottom: 2.5%;
+  }
 }
 
-h2 {
-  text-align: left;
-  padding-bottom: 2.5%;
+@media only screen and (min-width: 768px) {
+  h2 {
+    text-align: left;
+    padding-bottom: 2.5%;
+  }
 }
 
 h3 {
@@ -362,6 +532,8 @@ hr {
   border: solid;
   border-radius: 4px;
   background-color: #17252A;
+  border-color: #17252A;
+
 }
 
 td>button {
@@ -376,32 +548,88 @@ td>button {
   display: none;
 }
 
-#FAQ {
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 200px;
+@media only screen and (min-width: 0px) {
+  #FAQ {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 300px;
+  }
+
+  #FooterWavePatch {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    bottom: 2px;
+    background-color: #17252A;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #FAQ {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 200px;
+  }
+
+  #FooterWavePatch {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    bottom: 10px;
+    background-color: #17252A;
+  }
 }
 
 
-#FAQ button {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 150px;
-  height: 80px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 16px;
-  border-radius: 150px;
-  vertical-align: top;
+@media only screen and (min-width: 0px) {
+  #FAQ button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 90%;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 150px;
+    vertical-align: top;
+  }
+  .logo-container.footerContent{
+    display: none;
+  }
+  #Footer h3{
+    font-family: Pacifico;
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  #FAQ button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 150px;
+    height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 150px;
+    vertical-align: top;
+  }
+  #Footer h3{
+    font-family: sans-serif;
+  }
+  .logo-container.footerContent{
+    display: default;
+  }
+}
+
+
 
 #FAQ .textLong {
   position : absolute;
-  width: 350px;
+  width: 300px;
   left:50%;
   margin: 0;
   margin-top: 30px;
-  margin-left: -195px;
+  margin-left: -170px;
   text-align : center
 }
 
@@ -447,14 +675,6 @@ td>button {
 #FooterWave path {
   stroke: none;
   fill: #17252A;
-}
-
-#FooterWavePatch {
-  position: relative;
-  width: 100%;
-  height: 20px;
-  bottom: 10px;
-  background-color: #17252A;
 }
 
 #Footer {
