@@ -210,14 +210,24 @@ function resetForm(){
 }
 
 function getFormData(){
+  let subjects = getSubjectsString();
   let str = "<p>name: " + $('input[name="name"]').val() + "<br>" +
     "e-mail: " + $('input[name="email"]').val() + "<br>" +
-    "subject: " + $('button[name="subject"].selectedButton').attr('data-value') + "<br>" +
+    "subject: " + subjects + "<br>" +
     "lvl: " + $('button[name="lvl"].selectedButton').attr('data-value') + "<br>" +
     "frequency: " + $('button[name="frequency"].selectedButton').attr('data-value') + "<br>" +
     "time-note: " + $('input[name="time_note"]').val() + "<br>" +
     "lection_type: " + $('button[name="lessonType"].selectedButton').attr('data-value') + "<br>" +
     "notes: " + $('input[name="notes"]').val() + "<br></p>";
+  return str;
+}
+
+function getSubjectsString(){
+  let str = "";
+  $('button[name="subject"].selectedButton').each(function(){
+    str += $(this).attr('data-value');
+    str += "; ";
+  });
   return str;
 }
 
