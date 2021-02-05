@@ -134,17 +134,11 @@ $(".radio button, .select button").click(function(){
 
   let lvl = $('button[name="lvl"].selectedButton').attr('data-value');
 
-  $("#Czech_warning").addClass("hidden");
   $("#German_warning").addClass("hidden");
   $("#Chemistry_warning").addClass("hidden");
 
 
   $('button[name="subject"].selectedButton').each(function( index ) {
-    if($(this).attr('data-value') == "cestina"){
-      if(lvl == "1-2střední" || lvl == "3-4střední"){
-        $("#Czech_warning").removeClass("hidden");
-      }
-    }
     if($(this).attr('data-value') == "nemina"){
       if(lvl == "3-4střední"){
         $("#German_warning").removeClass("hidden");
@@ -166,8 +160,6 @@ $("form").submit(function(e){
   }else if(!$("#German_warning").hasClass("hidden")){
     scrollToElement("#German_warning");
     return;
-  }else if(!$("#Czech_warning").hasClass("hidden")){
-    scrollToElement("#Czech_warning");
   }else if(!$("#Chemistry_warning").hasClass("hidden")){
     scrollToElement("#Chemistry_warning");
   }else if($("input[name='name']").val().length == 0){
@@ -199,7 +191,6 @@ function resetForm(){
   $("button[data-value='1-5zš']").addClass("selectedButton");
   $("button[data-value='once']").addClass("selectedButton");
   $("#German_warning").addClass("hidden");
-  $("#Czech_warning").addClass("hidden");
   $("#Email_warning").addClass("hidden");
   $("#Name_warning").addClass("hidden");
   $("#Chemistry_warning").addClass("hidden");
