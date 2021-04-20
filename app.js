@@ -18,6 +18,14 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+const errorAlert = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.ERRORALERTADRESS,
+    pass: process.env.ERRORALERTPASSWORD
+  }
+});
+
 let mailOptions;
 
 
@@ -30,21 +38,35 @@ app.post('/form', function(req, res) {
   let str = JSON.stringify(req.body);
   str = str.replace('{"', "");
   str = str.replace('":""}', "");
-  console.log(str);
 
   mailOptions = {
     from: process.env.EMAIL,
-    to: process.env.EMAIL,
+    to: process.env.RECIEVER,
     subject: 'New Client',
     html: str
   };
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
-      console.log(error);
+      console.log("Error sending email");
+      let errorContent = JSON.stringify(error) + "\n\nUser request:" + str;
+      let errorAlertMessageOptions = {
+        from: process.env.ERRORALERTADRESS,
+        to: process.env.ERRORALERTADRESS,
+        subject: "Projekt doucko email error",
+        html: errorContent
+      }
+      errorAlert.sendMail(errorAlertMessageOptions, function(err, info){
+        if(err){
+          console.log("couldnt send error alert");
+        }else{
+          console.log("error alert has been sent");
+        }
+      })
     } else {
       console.log('Email sent: ' + info.response);
     }
   });
+
 
   res.redirect("/");
 });
