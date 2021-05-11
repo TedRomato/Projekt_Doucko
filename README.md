@@ -1,1 +1,3 @@
 # Projekt_Doucko
+This is a small, single page website, for online lessons orders. It has an alert system, and it runs for free. Orders are sent to me via e-mail, as well as periodical status messages. The website is hosted on Heroku. On the frontend, I used some basic CSS for layout and element styling, and for my slideshow, I used Owl Carousel library, that works, and looks perfectly. You can visist the website over at this link: https://rychly-doucko.herokuapp.com/. Other links: 1. Heroku web hosting: https://devcenter.heroku.com/
+2. Owl carousel: https://owlcarousel2.github.io/OwlCarousel2/
