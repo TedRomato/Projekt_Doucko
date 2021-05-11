@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const Visit = require('./models/visit.js');
 require('dotenv').config();
 
 
@@ -9,6 +11,12 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true});
+const db = mongoose.connection;
+
+db.on('error', (e) => console.log(e));
+db.on('open', () => console.log("DB connection succesful"));
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -18,22 +26,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const errorAlert = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.ERRORALERTADRESS,
-    pass: process.env.ERRORALERTPASSWORD
-  }
-});
 
-
-let visits = 0;
-let errorCount = 0;
-
-app.get('/', function(req, res) {
-  ++visits;
+app.get('/',async function(req, res) {
   res.sendFile(__dirname + '/index.html');
-
+  const newVisit = new Visit();
+  newVisit.save();
 });
 
 app.post('/form', function(req, res) {
@@ -45,14 +42,14 @@ app.post('/form', function(req, res) {
 
   mailOptions = {
     from: process.env.EMAIL,
-    to: process.env.RECIEVER,
+    to: process.env.EMAIL,
     subject: 'New Client',
     html: str
   };
 
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error){
-      alertErrorSendingEmail(error, str);
+  transporter.sendMail(mailOptions, function(e, info) {
+    if (e){
+      console.error(e.name + ":" + e.message);
       return;
     }
     console.log('Email sent: ' + info.response);
@@ -62,70 +59,6 @@ app.post('/form', function(req, res) {
   res.redirect("/");
 });
 
-
-function alertErrorSendingEmail(error, failedRequestData){
-    errorCount++;
-    console.log("Error sending email");
-    let errorContent = JSON.stringify(error) + "\n\nUser request:" + failedRequestData;
-    let errorAlertMessageOptions = {
-      from: process.env.ERRORALERTADRESS,
-      to: process.env.ERRORALERTADRESS,
-      subject: "Projekt doucko email error",
-      html: errorContent
-    }
-    errorAlert.sendMail(errorAlertMessageOptions, function(err, info){
-      if(err){
-        console.log("couldnt send error alert");
-        return;
-      }
-      console.log("error alert has been sent");
-    })
-
-}
-
-const statusDelayDays = 3;
-const intervalLenght = statusDelayDays*24*60*60*1000;
-
-setInterval(() => {
-  sendErrorAlertStatus();
-  sendStatusWebsiteEmail();
-  visits = 0;
-  errorCount = 0;
-}
-, intervalLenght);
-
-
-function sendStatusWebsiteEmail(){
-  let websiteStatusOptions = {
-    from: process.env.EMAIL,
-    to: process.env.RECIEVER,
-    subject: "Status",
-    html: `Server is running. Website has been loaded ${visits} times in last ${statusDelayDays} days.`
-  }
-  transporter.sendMail(websiteStatusOptions, function(error, info) {
-    if (error){
-      alertErrorSendingEmail();
-      return;
-    }
-    console.log('Automailer status email sent');
-  });
-}
-
-function sendErrorAlertStatus(){
-  let websiteStatusOptions = {
-    from: process.env.ERRORALERTADRESS,
-    to: process.env.ERRORALERTADRESS,
-    subject: "Status",
-    html: `Error alert is tunning on Projekt_Doucko. There were ${errorCount} error(s) in last ${statusDelayDays} days.`
-  }
-  errorAlert.sendMail(websiteStatusOptions, function(error, info) {
-    if (error){
-      alertErrorSendingEmail();
-      return;
-    }
-    console.log('Error alert status email sent');
-  });
-}
 
 app.listen(process.env.PORT || 5000, function() {
 
