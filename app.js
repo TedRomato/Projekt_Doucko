@@ -29,8 +29,13 @@ const transporter = nodemailer.createTransport({
 
 app.get('/',async function(req, res) {
   res.sendFile(__dirname + '/index.html');
-  const newVisit = new Visit();
-  newVisit.save();
+  try {
+    const newVisit = new Visit();
+    newVisit.save();
+  } catch (e) {
+    console.log("Error: ");
+    console.error(e);
+  }
 });
 
 app.post('/form', function(req, res) {
