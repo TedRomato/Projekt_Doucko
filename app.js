@@ -47,7 +47,7 @@ app.post('/form', function(req, res) {
 
   mailOptions = {
     from: process.env.EMAIL,
-    to: process.env.EMAIL,
+    to: process.env.RECIEVER,
     subject: 'New Client',
     html: str
   };
