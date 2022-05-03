@@ -31,13 +31,16 @@ const errorMailer = nodemailer.createTransport({
 
 async function sendStatus(){
   console.log(parseInt(process.env.LOGGED_VISITS_DAYS_BACK));
-  const visits = await getVisistsInRange(new Date().getDate() - parseInt(process.env.LOGGED_VISITS_DAYS_BACK), new Date());
+  //Creating date from which to take new visits
+  let from = new Date();
+  from.setHours(from.getHours() - parseInt(process.env.LOGGED_VISITS_DAYS_BACK)*24);
+  const visits = await getVisistsInRange(from, new Date());
 
   let websiteStatusOptions = {
     from: process.env.EMAIL,
     to: process.env.RECIEVER,
     subject: "Status",
-    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.LOGGED_VISITS_DAYS_BACK} days. Visits: ${visits}`
+    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.LOGGED_VISITS_DAYS_BACK} days. Visit dates: ${visits.map(visit => {return visit.date})}`
   }
   transporter.sendMail(websiteStatusOptions, function(e, info) {
     if (e){
