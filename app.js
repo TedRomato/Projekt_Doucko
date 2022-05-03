@@ -54,6 +54,7 @@ app.post('/form', function(req, res) {
 
   transporter.sendMail(mailOptions, function(e, info) {
     if (e){
+      console.log("Failed to send email for order: " + str);
       console.error(e.name + ":" + e.message);
       return;
     }
