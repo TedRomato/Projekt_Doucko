@@ -40,7 +40,7 @@ async function sendStatus(){
     from: process.env.EMAIL,
     to: process.env.RECIEVER,
     subject: "Status",
-    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.LOGGED_VISITS_DAYS_BACK} days. Visit dates: ${visits.map(visit => {return visit.date})}`
+    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.LOGGED_VISITS_DAYS_BACK} days. Visit dates: ${visits.map(visit => {return visit.visitDate})}`
   }
   transporter.sendMail(websiteStatusOptions, function(e, info) {
     if (e){
