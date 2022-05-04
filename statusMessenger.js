@@ -13,7 +13,7 @@ db.on('open', () => console.log("DB connection succesful"));
 
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: process.env.SERVICE,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD
@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const errorMailer = nodemailer.createTransport({
-  service: 'gmail',
+  service:process.env.SERVICE, 
   auth: {
     user: process.env.ERRORALERTADRESS,
     pass: process.env.ERRORALERTPASSWORD
