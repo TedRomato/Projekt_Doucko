@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const nodemailer = require('nodemailer');
+const MailosaurClient = require('mailosaur')
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const Visit = require('./models/visit.js');
@@ -18,13 +18,7 @@ const db = mongoose.connection;
 db.on('error', (e) => console.log(e));
 db.on('open', () => console.log("DB connection succesful"));
 
-const transporter = nodemailer.createTransport({
-  service: process.env.SERVICE,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD
-  }
-});
+const mailosaur = new MailosaurClient(process.env.API_KEY)
 
 
 app.get('/',async function(req, res) {
@@ -38,7 +32,7 @@ app.get('/',async function(req, res) {
   }
 });
 
-app.post('/form', function(req, res) {
+app.post('/form', async function(req, res) {
   let str = JSON.stringify(req.body);
   str = str.replace('{"', "");
   str = str.replace('":""}', "");
@@ -46,21 +40,14 @@ app.post('/form', function(req, res) {
   let mailOptions;
 
   mailOptions = {
-    from: process.env.EMAIL,
+    send: true,
     to: process.env.RECIEVER,
     subject: 'New Client',
     html: str
   };
 
-  transporter.sendMail(mailOptions, function(e, info) {
-    if (e){
-      console.log("Failed to send email for order: " + str);
-      console.error(e.name + ":" + e.message);
-      return;
-    }
-    console.log('Email sent: ' + info.response);
-  });
-
+  const status = await mailosaur.messages.create(process.env.SERVER_ID, mailOptions);
+  console.log(status);
 
   res.redirect("/");
 });

@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const MailosaurClient = require('mailosaur')
 const mongoose = require('mongoose');
 const ExecutionCounter = require('./models/executionCounter.js');
 const Visit = require('./models/visit.js');
@@ -9,69 +9,33 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
 const db = mongoose.connection;
 
 db.on('error', (e) => console.log(e));
-db.on('open', () => console.log("DB connection succesful"));
-
-
-const transporter = nodemailer.createTransport({
-  service: process.env.SERVICE,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD
-  }
+db.on('open', () => {
+  console.log("DB connection succesful")
+  handleStatusMessage();  
 });
 
-const errorMailer = nodemailer.createTransport({
-  service:process.env.SERVICE, 
-  auth: {
-    user: process.env.ERRORALERTADRESS,
-    pass: process.env.ERRORALERTPASSWORD
-  }
-});
+
+
+
+const mailosaur = new MailosaurClient(process.env.API_KEY)
 
 
 async function sendStatus(){
-  console.log(parseInt(process.env.LOGGED_VISITS_DAYS_BACK));
   //Creating date from which to take new visits
   let from = new Date();
-  from.setHours(from.getHours() - parseInt(process.env.LOGGED_VISITS_DAYS_BACK)*24);
+  from.setHours(from.getHours() - parseInt(process.env.EXECUTIONS_BEFORE_MESSAGE)*24);
   const visits = await getVisistsInRange(from, new Date());
 
-  let websiteStatusOptions = {
-    from: process.env.EMAIL,
+  let mailOptions = {
     to: process.env.RECIEVER,
+    send: true,
     subject: "Status",
-    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.LOGGED_VISITS_DAYS_BACK} days. Visit dates: ${visits.map(visit => {return visit.visitDate})}`
+    html: `Automailer is running on Projekt_Doucko, it was visited ${visits.length} times last ${process.env.EXECUTIONS_BEFORE_MESSAGE} days. Visit dates: ${visits.map(visit => {return visit.visitDate})}`
   }
-  transporter.sendMail(websiteStatusOptions, function(e, info) {
-    if (e){
-      console.error(e.name + ":" + e.message);
-      return;
-    }
-    console.log('Automailer status email sent');
-  });
+  console.log("sending mail ...")
+  await mailosaur.messages.create(process.env.SERVER_ID, mailOptions);
+  console.log("email sent.")
 
-  websiteStatusOptions.to = process.env.EMAIL;
-  transporter.sendMail(websiteStatusOptions, function(e, info) {
-    if (e){
-      console.error(e.name + ":" + e.message);
-      return;
-    }
-    console.log('Automailer status email sent');
-  });
-
-  let errorStatusOptions = {
-    from: process.env.ERRORALERTADRESS,
-    to: process.env.ERRORALERTADRESS,
-    subject: "Status",
-    html: `Erromailer is up and running on Projekt_Doucko`
-  }
-  errorMailer.sendMail(errorStatusOptions, function(e, info) {
-    if (e){
-      console.error(e.name + ":" + e.message);
-      return;
-    }
-    console.log('Error  status email sent');
-  });
 }
 
 
@@ -101,7 +65,6 @@ async function updateExecutionCounter(executionCounter, updatedValue){
   if(typeof updatedValue === 'Number') throw new Error("updatedValue must be a number");
   try {
     executionCounter.executions = updatedValue;
-    console.log(executionCounter);
     await executionCounter.save();
     return true;
   } catch (e) {
@@ -114,10 +77,11 @@ async function updateExecutionCounter(executionCounter, updatedValue){
 async function handleStatusMessage(){
   //get amount of times this script was triggered from last status message
   const executionCounter = await getExecutionCounter();
+  console.log(executionCounter);
 
   //if it was triggered x times we should send new status message, and restart counter
   //else we should increment counter
-  if(executionCounter.executions >= parseInt(process.env.EXECUTIONS_BEFORE_STATUS_MESSAGE)){
+  if(executionCounter.executions >= parseInt(process.env.EXECUTIONS_BEFORE_MESSAGE)){
     try {
       await sendStatus();
       await updateExecutionCounter(executionCounter, 0);
@@ -132,5 +96,3 @@ async function handleStatusMessage(){
     }
   }
 }
-
-handleStatusMessage();
