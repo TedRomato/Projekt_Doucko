@@ -2,7 +2,12 @@ const MailosaurClient = require('mailosaur')
 const mongoose = require('mongoose');
 const ExecutionCounter = require('./models/executionCounter.js');
 const Visit = require('./models/visit.js');
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch (e) {
+  console.log("no dotenv file")
+}
+
 
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true});

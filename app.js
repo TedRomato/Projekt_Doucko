@@ -4,7 +4,12 @@ const MailosaurClient = require('mailosaur')
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const Visit = require('./models/visit.js');
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch (e) {
+  console.log("no dotenv file")
+}
+
 
 
 app.use(express.static('public'));
